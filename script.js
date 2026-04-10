@@ -36,6 +36,11 @@ function dibujarCuadricula(){
     ctx.fillstyle="Black";
     for(let i=0;i<=canvas.width/escala;i++){
         ctx.fillText(i, i*escala, canvas.height-5);
+    }
+    //numeracion eje y
+    for(let i=0;i<=canvas.height/escala;i++){
+        ctx.fillText(i,0,canvas.height-(i*escala));
+    }
 }
 /**
  * Implementación del algoritmo de líneas de Bresenham.
