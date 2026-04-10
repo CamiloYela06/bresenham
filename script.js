@@ -7,8 +7,10 @@ function limpiar(){
 }
 
 //Dibuja un punto en el canvas
+const escala = 20;
+
 function plot(x,y){
-    ctx.fillRect(x,y,1,1);
+    ctx.fillRect(x*escala,y*escala,escala,escala);
 }
 /**
  * Implementación del algoritmo de líneas de Bresenham.
