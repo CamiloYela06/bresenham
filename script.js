@@ -51,6 +51,8 @@ function dibujarCuadricula(){
  * @param {Function} plot - Función para dibujar el píxel (x, y).
  */
 function bresenham(x0, y0, x1, y1, plot) {
+
+    let k = 0;
     // Cálculo de diferenciales y dirección del paso
     let dx = Math.abs(x1 - x0);
     let dy = Math.abs(y1 - y0);
