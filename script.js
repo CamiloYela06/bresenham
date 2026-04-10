@@ -85,4 +85,19 @@ function bresenham(x0, y0, x1, y1, plot) {
         }
         k++;
     }
+    return pasos;
+}
+//llena la tabla con los pasos del algoritmo
+function llenarTabla(pasos){
+    const tbody=document.querySelector("#tabla tbody");
+    tbody.innerHTML="";
+    pasos.forEach(p=>{
+        tbody.innerHTML+=`
+        <tr>
+        <td>${p.k}</td>
+        <td>${p.x}</td>
+        <td>${p.y}</td>
+        <td>${p.err}</td>
+        </tr>`;
+    });
 }
