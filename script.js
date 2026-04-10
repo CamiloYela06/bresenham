@@ -19,7 +19,10 @@ function plot(x,y){
         escala
     );
 }
+//dibujar cuadricula y numeracion 
 function dibujarCuadricula(){
+       ctx.strokeStyle = "#ccc";
+       ctx.beginPath();
     for(let x=0;x<canvas.width;x+=escala){
         ctx.moveTo(x,0);
         ctx.lineTo(x,canvas.height);
@@ -29,6 +32,10 @@ function dibujarCuadricula(){
         ctx.lineTo(canvas.width,y);
     }
     ctx.stroke();
+    //numeracion eje x 
+    ctx.fillstyle="Black";
+    for(let i=0;i<=canvas.width/escala;i++){
+        ctx.fillText(i, i*escala, canvas.height-5);
 }
 /**
  * Implementación del algoritmo de líneas de Bresenham.
