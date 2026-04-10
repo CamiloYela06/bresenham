@@ -10,7 +10,14 @@ function limpiar(){
 const escala = 20;
 
 function plot(x,y){
-    ctx.fillRect(x*escala,y*escala,escala,escala);
+    ctx.fillstyle="Black";
+
+    ctx.fillRect(
+        x*escala,
+        canvas.height - y*escala,
+        escala,
+        escala
+    );
 }
 /**
  * Implementación del algoritmo de líneas de Bresenham.
