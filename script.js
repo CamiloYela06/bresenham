@@ -19,6 +19,17 @@ function plot(x,y){
         escala
     );
 }
+function dibujarCuadricula(){
+    for(let x=0;x<canvas.width;x+=escala){
+        ctx.moveTo(x,0);
+        ctx.lineTo(x,canvas.height);
+    }
+    for(let y=0;y<canvas.height;y+=escala){
+        ctx.moveTo(0,y);
+        ctx.lineTo(canvas.width,y);
+    }
+    ctx.stroke();
+}
 /**
  * Implementación del algoritmo de líneas de Bresenham.
  * @param {number} x0 - Coordenada X inicial.
