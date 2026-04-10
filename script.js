@@ -62,6 +62,8 @@ function bresenham(x0, y0, x1, y1, plot) {
     let err = dx - dy;
 
     while (true) {
+        pasos.push({k,x:x0,y:y0,err});
+
         // Dibujar el punto actual
         plot(x0, y0);
 
@@ -81,5 +83,6 @@ function bresenham(x0, y0, x1, y1, plot) {
             err += dx;
             y0 += sy;
         }
+        k++;
     }
 }
