@@ -1,4 +1,5 @@
-
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 /**
  * Implementación del algoritmo de líneas de Bresenham.
  * @param {number} x0 - Coordenada X inicial.
