@@ -5,6 +5,11 @@ const ctx = canvas.getContext("2d");
 function limpiar(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
 }
+
+//Dibuja un punto en el canvas
+function plot(x,y){
+    ctx.fillRect(x,y,1,1);
+}
 /**
  * Implementación del algoritmo de líneas de Bresenham.
  * @param {number} x0 - Coordenada X inicial.
